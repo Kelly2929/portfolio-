@@ -1,0 +1,49 @@
+#part 2
+
+import random
+class card:
+    def _init___(self,suit,value):
+        self.suit=suit
+        self.value=value
+
+        def__repr__(self):
+
+        return f "{self.value} of {self.suit}"
+
+Class Deck:
+
+     def__init_(self)
+
+        suits= [ "Hearts" ,"Diamonds", "Clubs" ,"Spades" ]
+        Values=["A", "2", "3", "4", "5", "6", "7", "8", "9", "10", "J", "Q", "K"]
+        self.cards = [Card(suit, value) for suit in suits for value in values]
+
+def shuffle(self):
+        random.shuffle(self.cards)
+
+ def deal(self):
+        return self.cards.pop() if self.cards else None
+print (deck.deal())
+
+
+#part 1 QUIZZ
+
+
+Class: A blueprint for creating objects in object-oriented programming, defining common attributes and methods.
+
+Instance: A specific object created from a class, having unique attributes while sharing the class's structure and behaviors.
+
+Encapsulation: A principle that combines data and methods into a single unit (class) and restricts direct access to the class's internal details, enhancing data security and integrity.
+
+Polymorphism: The ability of different classes to be treated as instances of the same class through a common interface.
+
+Method Resolution Order (MRO): The sequence in which base classes are searched when calling a method in a class hierarchy, particularly in multiple inheritance.
+
+
+
+
+
+
+
+
+
