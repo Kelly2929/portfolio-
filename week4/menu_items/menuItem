@@ -1,0 +1,70 @@
+class MenuItem:
+    def __init__(self, name, price):
+        self.name = name
+        self.price = price
+
+    def __repr__(self):
+        return f"MenuItem(name='{self.name}', price={self.price})"
+    
+    item = MenuItem("Pizza Margherita", 10)
+print(item)
+
+import psycopg2
+
+class MenuItem:
+    def __init__(self, name, price):
+        self.name = name
+        self.price = price
+
+    def save(self):
+        conn = psycopg2.connect("resto,'postgres' 1hicQWC5ngvepmkU_lq3UmO0LDxWsgKr")
+        cursor = conn.cursor()
+        cursor.execute("INSERT INTO Menu_Items (item_name, item_price) VALUES (%s, %s)", (self.name, self.price))
+        conn.commit()
+        cursor.close()
+        conn.close()
+
+    def delete(self):("resto,'postgres' 1hicQWC5ngvepmkU_lq3UmO0LDxWsgKr")
+        conn = psycopg2.connect
+        cursor = conn.cursor()
+        cursor.execute("DELETE FROM Menu_Items WHERE item_name = %s", (self.name,))
+        conn.commit()
+        cursor.close()
+        conn.close()
+
+    def update(self, new_name=None, new_price=None):("resto,'postgres' 1hicQWC5ngvepmkU_lq3UmO0LDxWsgKr")
+        conn = psycopg2.connect
+        cursor = conn.cursor()
+        if new_name and new_price:
+            cursor.execute("UPDATE Menu_Items SET item_name = %s, item_price = %s WHERE item_name = %s", (new_name, new_price, self.name))
+        elif new_name:
+            cursor.execute("UPDATE Menu_Items SET item_name = %s WHERE item_name = %s", (new_name, self.name))
+        elif new_price:
+            cursor.execute("UPDATE Menu_Items SET item_price = %s WHERE item_name = %s", (new_price, self.name))
+        conn.commit()
+        cursor.close()
+        conn.close()
+        if new_name:
+            self.name = new_name
+        if new_price:
+            self.price = new_price
+
+
+            # Add a new item
+item = MenuItem("Pasta", 12)
+item.save()
+
+# Update an item
+item.update(new_price=14)
+
+# Delete an item
+item.delete()
+
+# Get an item by name
+menu_item = MenuManager.get_by_name("Pasta")
+if menu_item:
+    print(menu_item.name, menu_item.price)
+else:
+    print("Item not found")
+
+

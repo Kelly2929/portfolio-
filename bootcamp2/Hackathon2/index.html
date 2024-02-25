@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Tribute Page</title>
+    <link rel="stylesheet" href="index.css">
+</head>
+<body>
+    <header>
+        <h1>Tributes to Heroes of History</h1>
+        <p>Tribute to the victims of the Holocaust.</p>
+    </header>
+    
+    <main>
+        <section>
+            <h2>Featured Tributes</h2>
+            <ul>
+                <li>Anne Frank</li>
+                <li>Simon Wiesenthal</li>
+                <li>Edith Stein</li>
+                <li>Primo Levi</li>
+            </ul>
+        </section>
+        
+        <section id="gallery">
+            <h2>Gallery</h2>
+            <div class="photo">
+                <img src="c:\Users\Laura\Downloads\anne frank.jpg" width="150" height="300" alt="Anne Frank">
+                <img src="c:\Users\Laura\Documents\Kelly\portfolio\week5\Edith-Stein.jpg" width="150" height="300" alt="Edith Stein">
+                <img src="c:\Users\Laura\Documents\Kelly\portfolio\week5\Primo Levy.webp" width="150" height="300" alt="Primo Levi">
+                <img src="c:\Users\Laura\Documents\Kelly\portfolio\week5\Simon wiesenthal.jpg" width="150" height="300" alt="Simon Wiesenthal">
+            </div>
+        </section>
+        
+        <section id="messageSection">
+            <h2>Leave a Message</h2>
+            <form id="messageForm">
+                <input type="text" id="author" name="author" placeholder="Your Name" required>
+                <textarea id="message" name="message" placeholder="Your Message" required></textarea>
+                <button type="submit">Post Message</button>
+            </form>
+        </section>
+        
+        <section id="photoUploadSection">
+            <h2>Upload a Photo</h2>
+            <form id="photoUploadForm" enctype="multipart/form-data">
+                <input type="file" id="photo" name="photo" required>
+                <button type="submit">Upload Photo</button>
+            </form>
+        </section>
+    </main>
+
+    <script src="contact.js"></script>
+</body>
+</html>

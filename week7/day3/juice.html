@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+  </head>
+  <body></body>
+</html>
+
+<!DOCTYPE html>
+<html>
+  <body>
+    <script>
+      function makeJuice(size) {
+        function addIngredients(ingredient1, ingredient2, ingredient3) {
+          document.body.innerHTML += `<p>The client wants a ${size} juice, containing ${ingredient1}, ${ingredient2}, ${ingredient3}.</p>`;
+        }
+
+        addIngredients("apples", "oranges", "bananas");
+      }
+
+      makeJuice("large");
+    </script>
+  </body>
+</html>
+<!DOCTYPE html>
+<html>
+<body>
+
+<script>
+function makeJuice(size) {
+  let ingredients = [];
+
+  function addIngredients(ingredient1, ingredient2, ingredient3) {
+    ingredients.push(ingredient1, ingredient2, ingredient3);
+  }
+
+  function displayJuice() {
+    document.body.innerHTML += `<p>The client wants a ${size} juice, containing ${ingredients.join(', ')}.</p>`;
+  }
+
+  addIngredients('apples', 'oranges', 'bananas'); 
+  addIngredients('carrots', 'ginger', 'mango'); 
+
+  displayJuice();
+}
+
+makeJuice('medium'); // Example size
+</script>
+
+</body>
+</html>
+
