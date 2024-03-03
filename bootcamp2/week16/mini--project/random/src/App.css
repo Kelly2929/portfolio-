@@ -1,0 +1,70 @@
+/* Apply a background to the entire view and use a flexbox layout to center the quote box */
+body {
+  margin: 0;
+  padding: 0;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 100vh;
+  font-family: 'Arial', sans-serif;
+  background: linear-gradient(135deg, #667eea, #764ba2);
+  transition: background-color 0.5s;
+}
+
+/* Style the quote box with rounded corners and shadow for depth */
+#quote-box {
+  width: 90%;
+  max-width: 700px;
+  padding: 2rem;
+  margin: 2rem;
+  background-color: rgba(255, 255, 255, 0.9);
+  border-radius: 15px;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+  transition: background-color 0.5s;
+}
+
+/* Style the quote text with larger size for emphasis */
+#quote {
+  font-size: 1.5rem;
+  font-weight: bold;
+  color: #333;
+  margin-bottom: 1rem;
+}
+
+/* Subtle style for the author */
+#author {
+  font-size: 1rem;
+  font-style: italic;
+  color: #666;
+  margin-bottom: 2rem;
+}
+
+/* Style the 'New Quote' button with a modern look */
+#new-quote {
+  padding: 0.8rem 2.5rem;
+  font-size: 1rem;
+  color: white;
+  background-color: #667eea;
+  border: none;
+  border-radius: 30px;
+  cursor: pointer;
+  outline: none;
+  transition: background-color 0.5s, transform 0.1s;
+}
+
+/* Slight animation on hover for the button */
+#new-quote:hover {
+  background-color: #575ed8;
+  transform: scale(1.05);
+}
+
+/* Responsive design for smaller screens */
+@media (max-width: 768px) {
+  #quote {
+    font-size: 1.2rem;
+  }
+
+  #author {
+    font-size: 0.9rem;
+  }
+}
