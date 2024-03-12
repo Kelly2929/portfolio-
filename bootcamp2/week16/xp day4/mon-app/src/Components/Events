@@ -1,0 +1,19 @@
+import React from 'react';
+
+// Define the Events functional component
+const Events = () => {
+  // Define the clickMe arrow function
+  const clickMe = () => {
+    alert('I was clicked');
+  };
+
+  // Return JSX for the component
+  return (
+    <div>
+      {/* Button element with an onClick event handler */}
+      <button onClick={clickMe}>Click Me</button>
+    </div>
+  );
+};
+
+export default Events;

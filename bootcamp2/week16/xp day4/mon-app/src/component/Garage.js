@@ -1,0 +1,8 @@
+// In src/Components/Garage.js
+import React from 'react';
+
+const Garage = ({ size }) => {
+  return <h4>Who lives in my {size} Garage?</h4>;
+}
+
+export default Garage;
